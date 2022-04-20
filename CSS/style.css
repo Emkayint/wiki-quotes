@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    background-color: aquamarine;
+    height: 100vh;
+    padding: 5%;
+    overflow: hidden;
+    
+}
+
+.hero{
+    height: 100%;
+    width: auto;
+    background-color: rgba(0, 0, 0, .6);
+}
