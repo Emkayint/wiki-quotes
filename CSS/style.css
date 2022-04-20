@@ -5,7 +5,7 @@
 }
 
 .main{
-    background-color: aquamarine;
+    background: linear-gradient(189deg, red, blue);
     height: 100vh;
     padding-top: 3%;
     padding-bottom: 3%;
@@ -92,4 +92,16 @@ header{
 }
 p{
     text-decoration: underline;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.bg-custom{
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.card-custom{
+
 }
