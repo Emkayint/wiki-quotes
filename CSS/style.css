@@ -15,5 +15,12 @@
 .hero{
     height: 100%;
     width: auto;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+header{
+    height: 50px;
+    background-color: rgba(0, 0, 0, .2);
 }
