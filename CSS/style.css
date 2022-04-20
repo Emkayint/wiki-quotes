@@ -18,7 +18,7 @@
 .hero{
     height: 100%;
     width: auto;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .1);
     border-radius: 20px;
     overflow: hidden;
 }
@@ -64,13 +64,17 @@ header{
 /* line span desing */
 
 .line-span{
-    display: block;
-    height: 45%;
+    display: inline-block;
+    height: 40%;
     width: 1px;
     background-color: wheat;
+    margin-left: 20px;
+    margin-bottom: 10px;
 
 }
 .line-span-1{
+    margin-left: 20px;
+    margin-top: 10px;
     display: inline-block;
     height: 45%;
     width: 1px;
@@ -102,6 +106,41 @@ p{
     background-color: rgba(0, 0, 0, .2);
 }
 
-.card-custom{
+.cont{
+    position: relative;
+}
 
+.custom-card{
+    box-shadow: 0 4px 8px 7px rgba(0, 0, 0, .5);
+    transition:  1s;
+    height: 75vh;
+    margin-left: 10px;
+    background: rgba(255, 255, 255, .5);
+    border: 2px solid blue;
+    width: 80%;
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 123px 30px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+}
+
+.custom-card-2{
+    box-shadow: 0 4px 8px 7px rgba(0, 0, 0, .5);
+    transition:  1s;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    border: 4px solid black;
+    left: 10;
+    height: 80vh;
+    background: rgba(0, 0, 0, .0);
+    width: 80%;
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 123px 30px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+}
+
+.custom-card :hover{
+    box-shadow: o 8px 16px 0 rgba(0, 0, 0, .2);
 }
