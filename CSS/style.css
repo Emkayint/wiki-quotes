@@ -7,7 +7,10 @@
 .main{
     background-color: aquamarine;
     height: 100vh;
-    padding: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 5%;
+    padding-left: 5%;
     overflow: hidden;
     
 }
@@ -73,4 +76,20 @@ header{
     width: 1px;
     background-color: white;
 
+}
+
+/* design one  */
+.design-one{
+    border-radius: 20px;
+    overflow: auto;
+    padding: 10px;
+    height: 75vh;
+    color: white
+}
+
+.hd{
+    overflow: hidden;
+}
+p{
+    text-decoration: underline;
 }
