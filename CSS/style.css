@@ -23,6 +23,16 @@
 header{
     height: 50px;
     background-color: rgba(0, 0, 0, .2);
+    border-bottom: 1px solid white;
+
+}
+.one{
+    height: 100%;
+}
+
+.bdl{
+    border-right: 1px solid white;
+    /* height: 100%; */
 }
 
 .content{
@@ -46,4 +56,21 @@ header{
 
 .dot-3{
     background-color: green;
+}
+
+/* line span desing */
+
+.line-span{
+    display: block;
+    height: 45%;
+    width: 1px;
+    background-color: wheat;
+
+}
+.line-span-1{
+    display: inline-block;
+    height: 45%;
+    width: 1px;
+    background-color: white;
+
 }
