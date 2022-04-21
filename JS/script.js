@@ -1,3 +1,12 @@
+let quote = document.getElementById('custom-quote')
+let quoteAuthor1 = document.getElementById('author') 
+let quoteSection = document.getElementById('quote-section')
+let btn = document.querySelectorAll('button')
+let formSection = document.getElementById('form-section')
+
+
+
+
 let fetchData = (data) => {
     console.log(data)
     document.getElementById('custom-quote').innerText = data.content
@@ -21,7 +30,6 @@ function getApiData(param){
 
 // getApiData(fetchData)
 
-let btn = document.querySelectorAll('button')
 
 btn.forEach(button => button.addEventListener('click', () => {
     if(button.innerText === 'Quotes'){
