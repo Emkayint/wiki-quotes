@@ -1,9 +1,9 @@
 let quote = document.getElementById('custom-quote')
 let quoteAuthor1 = document.getElementById('author') 
 let quoteSection = document.getElementById('quote-section')
-let btn = document.querySelectorAll('button')
+let btn = document.querySelectorAll('.nav-btn')
 let formSection = document.getElementById('form-section')
-
+let aboutSection = document.getElementById('about-section')
 
 
 
@@ -33,6 +33,17 @@ function getApiData(param){
 
 btn.forEach(button => button.addEventListener('click', () => {
     if(button.innerText === 'Quotes'){
-        document.getElementById('quote-section').style.display = "none"
+        quoteSection.style.display = "block"
+        formSection.style.display = "none"
+        aboutSection.style.display = "none"
+        
+    } else if(button.innerText === "Add Quote"){
+        quoteSection.style.display = 'none'
+        formSection.style.display = "block"
+        aboutSection.style.display = "none"
+    } else{
+        quoteSection.style.display = 'none'
+        formSection.style.display = "none"
+        aboutSection.style.display = "block"
     }
 }))
