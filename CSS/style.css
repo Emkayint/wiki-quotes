@@ -5,7 +5,11 @@
 }
 
 .main{
-    background: linear-gradient(189deg, red, blue);
+    /* background: linear-gradient(189deg, red, blue);
+     */
+    background-image: url("../assets/pexels-김-대정-2734469\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     padding-top: 3%;
     padding-bottom: 3%;
@@ -18,7 +22,7 @@
 .hero{
     height: 100%;
     width: auto;
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     overflow: auto;
 }
@@ -115,7 +119,7 @@ header{
     transition:  1s;
     height: 70vh;
     margin-left: 10px;
-    background: rgba(255, 255, 255, .3);
+    background: rgba(0, 0, 0, 0.3);
     border: 2px solid blue;
     width: 80%;
     border-top-left-radius: 37px 140px;
@@ -197,4 +201,9 @@ header{
     border-top-right-radius: 123px 30px;
     border-bottom-left-radius: 110px 19px;
     border-bottom-right-radius: 120px 24px;
+}
+
+#author{
+    color: rgb(222, 213, 232);
+    background-color: rgba(0, 0, 0, .5);
 }

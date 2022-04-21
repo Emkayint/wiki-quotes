@@ -51,7 +51,7 @@ btn.forEach(button => button.addEventListener('click', () => {
         formSection.style.display = "block"
         aboutSection.style.display = "none"
     } else if(button.innerText === "Get New Quote"){
-        getApiData(fetchData)
+        // getApiData(fetchData)
     }
     else{
         quoteSection.style.display = 'none'
