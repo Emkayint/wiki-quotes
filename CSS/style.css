@@ -94,7 +94,7 @@ header{
 .hd{
     overflow: hidden;
 }
-p{
+.p{
     text-decoration: underline;
 }
 
@@ -186,6 +186,7 @@ p{
 .custom-card-3{
     box-shadow: 0 4px 8px 8px rgba(0, 0, 0, .7);
     transition:  1s;
+    text-align: center;
     top: 0;
     border: 4px solid rgb(11, 11, 11);
     height: 70vh;

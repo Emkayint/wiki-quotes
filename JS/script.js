@@ -7,10 +7,21 @@ let aboutSection = document.getElementById('about-section')
 
 
 
+
 let fetchData = (data) => {
     console.log(data)
-    document.getElementById('custom-quote').innerText = data.content
-    document.getElementById('author').innerText = data.originator.name
+    quote.innerText = data.content
+    quoteAuthor1.innerText = data.originator.name
+    let Aquote = document.createElement('div')
+
+    Aquote.innerHTML = `
+        <hr>
+        <div class="card-custom bg-custom p-3">
+            <p> <em>" ${data.content}"</em></p>
+            <p>Author <span> ${data.originator.name}</span> </p>
+        </div>
+    `
+    quoteSection.prepend(Aquote)
 }
 
 function getApiData(param){
@@ -27,9 +38,7 @@ function getApiData(param){
 
 }
 
-
 // getApiData(fetchData)
-
 
 btn.forEach(button => button.addEventListener('click', () => {
     if(button.innerText === 'Quotes'){
@@ -41,7 +50,10 @@ btn.forEach(button => button.addEventListener('click', () => {
         quoteSection.style.display = 'none'
         formSection.style.display = "block"
         aboutSection.style.display = "none"
-    } else{
+    } else if(button.innerText === "Get New Quote"){
+        getApiData(fetchData)
+    }
+    else{
         quoteSection.style.display = 'none'
         formSection.style.display = "none"
         aboutSection.style.display = "block"
