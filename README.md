@@ -1,4 +1,4 @@
-# Palais Des Pizzas
+# Wiki Quotes
 
 This website helps you get quotes easily
 
