@@ -50,7 +50,6 @@ btn.forEach(button => button.addEventListener('click', () => {
         quoteSection.style.display = 'none'
         formSection.style.display = "block"
         aboutSection.style.display = "none"
-    } else if(button.innerText === "Get New Quote"){
         // getApiData(fetchData)
     }
     else{
@@ -59,3 +58,32 @@ btn.forEach(button => button.addEventListener('click', () => {
         aboutSection.style.display = "block"
     }
 }))
+
+
+document.addEventListener('DOMContentLoaded', getForm)
+
+function getForm(){
+    let myForm = document.querySelector('form')
+
+    myForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        let inputQuote = document.getElementById("input-quote")
+        let inputAuthor = document.getElementById('input-author')
+        let inputCategory = document.getElementById('input-category')
+
+        let div = document.createElement('div')
+
+        div.innerHTML = `
+            <hr>
+            <div class="card-custom bg-custom p-3">
+                <p> <em>"${inputQuote.value}"</em></p>
+                <p><srong> Author:</strong> <span>${inputAuthor.value}</span> </p>
+                <button class = "btn btn-primary">${inputCategory.value}</button>
+            </div>
+        `
+        quoteSection.prepend(div)
+        quoteSection.style.display = 'block'
+        formSection.style.display = "none"
+        aboutSection.style.display = "none"
+    })
+}
