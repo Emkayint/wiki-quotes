@@ -4,8 +4,7 @@ let quoteSection = document.getElementById('quote-section')
 let btn = document.querySelectorAll('.nav-btn')
 let formSection = document.getElementById('form-section')
 let aboutSection = document.getElementById('about-section')
-
-
+let categoriesHere = document.querySelector('.categories-here')
 
 
 let fetchData = (data) => {
@@ -24,7 +23,6 @@ let fetchData = (data) => {
     `
     quoteSection.prepend(Aquote)
     data.tags.forEach( elem => {
-        let categoriesHere = document.querySelector('.categories-here')
         let aDiv = document.createElement('div')
         aDiv.innerHTML = `
         <p class="text-white txt-size"><span class="iconify" data-icon="emojione:gem-stone"></span>${elem}</p>
@@ -47,7 +45,7 @@ function getApiData(param){
 
 }
 
-getApiData(fetchData)
+// getApiData(fetchData)
 
 btn.forEach(button => button.addEventListener('click', () => {
     if(button.innerText === 'Quotes'){
@@ -60,7 +58,7 @@ btn.forEach(button => button.addEventListener('click', () => {
         formSection.style.display = "block"
         aboutSection.style.display = "none"
     } else if(button.innerText === 'Get New Quote'){
-        getApiData(fetchData)
+        // getApiData(fetchData)
 
     }
     else{
@@ -78,6 +76,8 @@ function getForm(){
 
     myForm.addEventListener('submit', (e) => {
         e.preventDefault()
+        document.querySelector('.categories-here').innerHTML = ""
+
         let inputQuote = document.getElementById("input-quote")
         let inputAuthor = document.getElementById('input-author')
         let inputCategory = document.getElementById('input-category')
@@ -93,6 +93,8 @@ function getForm(){
             </div>
         `
         quoteSection.prepend(div)
+        quote.innerText = inputQuote.value
+        quoteAuthor1.innerText = inputAuthor.value
         quoteSection.style.display = 'block'
         formSection.style.display = "none"
         aboutSection.style.display = "none"
