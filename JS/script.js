@@ -85,5 +85,8 @@ function getForm(){
         quoteSection.style.display = 'block'
         formSection.style.display = "none"
         aboutSection.style.display = "none"
+        inputAuthor.value = ""
+        inputCategory.value = ""
+        inputQuote.value = ""
     })
 }
