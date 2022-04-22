@@ -9,7 +9,8 @@ let aboutSection = document.getElementById('about-section')
 
 
 let fetchData = (data) => {
-    console.log(data)
+    // console.log(data)
+    document.querySelector('.categories-here').innerHTML = ""
     quote.innerText = data.content
     quoteAuthor1.innerText = data.originator.name
     let Aquote = document.createElement('div')
@@ -22,6 +23,14 @@ let fetchData = (data) => {
         </div>
     `
     quoteSection.prepend(Aquote)
+    data.tags.forEach( elem => {
+        let categoriesHere = document.querySelector('.categories-here')
+        let aDiv = document.createElement('div')
+        aDiv.innerHTML = `
+        <p class="text-white txt-size"><span class="iconify" data-icon="emojione:gem-stone"></span>${elem}</p>
+        `
+        categoriesHere.appendChild(aDiv)
+    })
 }
 
 function getApiData(param){
@@ -38,7 +47,7 @@ function getApiData(param){
 
 }
 
-// getApiData(fetchData)
+getApiData(fetchData)
 
 btn.forEach(button => button.addEventListener('click', () => {
     if(button.innerText === 'Quotes'){
@@ -50,7 +59,9 @@ btn.forEach(button => button.addEventListener('click', () => {
         quoteSection.style.display = 'none'
         formSection.style.display = "block"
         aboutSection.style.display = "none"
-        // getApiData(fetchData)
+    } else if(button.innerText === 'Get New Quote'){
+        getApiData(fetchData)
+
     }
     else{
         quoteSection.style.display = 'none'

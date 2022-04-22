@@ -220,3 +220,7 @@ header{
     background-color: rgba(0, 0, 0, .7);
     padding: 30px;
 }
+
+.txt-size{
+    font-size: .8em;
+}
